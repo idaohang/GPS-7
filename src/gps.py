@@ -5,12 +5,14 @@ Convert *.000 file and Output as a thb file.
 USAGE:
     $ python gps.py hogehoge.000 > Outputfile.thb
 """
+import sys, os
+lib_path = os.path.abspath('../lib')
+sys.path.append(lib_path)
 import mpl_toolkits.basemap as mpl
 import StringIO
 import scipy.signal as sp
 import math
 import csv
-import sys
 import wgs84
 
 
