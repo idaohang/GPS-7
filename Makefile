@@ -24,17 +24,16 @@ release: ./lib/wgs84.so ./build/wgs84-release.o ./build/wgs84-release.o
 ./build/wgs84-debug.o: ./src/wgs84.cpp ./include/wgs84.hpp
 	g++ $(DEBUG_FLAG) -I./include/ -I/usr/include/ -c ./src/wgs84.cpp -o ./build/wgs84-debug.o
 
-./build/python_wgs84-debug.o: ./src/python_wgs84.cpp ./include/wgs84.hpp
-	g++ $(debug_FLAG) -I./include/ -I/usr/include/python2.6/ -c ./src/python_wgs84.cpp -o ./build/python_wgs84-debug.o
+debug: ./build/wgs84-debug.o
 
-./lib/wgs84d.so: ./build/python_wgs84-debug.o ./build/wgs84-debug.o
-	g++ -shared -fPIC -Ofast -DPIC ./build/python_wgs84-debug.o ./build/wgs84-debug.o -L/usr/lib/ -lboost_python -L/usr/lib/python2.6/ -lpython2.6 -o ./lib/wgs84.so
+#compile python code
+./bin/gps.pyc: ./src/gps.py
+	python -m py_compile ./src/gps.py
+	mv ./src/gps.pyc ./bin/
 
-debug: ./lib/wgs84d.so ./build/wgs84-debug.o ./build/wgs84-debug.o
-
-all: release debug
+all: release debug ./bin/gps.pyc
 
 clean:
-	rm -f ./build/*.o *.so
+	rm -f ./build/*.o ./lib/*.so ./bin/*.pyc
 
 .PHONY: all clean python
