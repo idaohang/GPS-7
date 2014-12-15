@@ -2,11 +2,5 @@
 *.pyc
 *.o
 *.so
-*.a
 *.orig
-Makefile
-*.cmake
-CMakeCache.txt
-CMakeFiles
-
 

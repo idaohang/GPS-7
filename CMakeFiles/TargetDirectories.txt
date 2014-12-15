@@ -1,0 +1,2 @@
+/home/kei/src/GPS/CMakeFiles/pywgs84.dir
+/home/kei/src/GPS/CMakeFiles/wgs84.dir

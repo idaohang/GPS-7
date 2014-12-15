@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kei/src/GPS/src/python_wgs84.cpp
+wgs84.hpp
+/home/kei/src/GPS/src/wgs84.hpp
+vector
+-
+boost/python.hpp
+-
+boost/python/suite/indexing/vector_indexing_suite.hpp
+-
+
+include/wgs84.hpp
+vector
+-
+

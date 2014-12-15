@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kei/src/GPS/src/wgs84.cpp
+wgs84.hpp
+/home/kei/src/GPS/src/wgs84.hpp
+cmath
+-
+vector
+-
+
+include/wgs84.hpp
+vector
+-
+

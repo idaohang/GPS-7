@@ -1,0 +1,2 @@
+/usr/bin/ar cr lib/libwgs84.a  CMakeFiles/wgs84.dir/src/wgs84.cpp.o
+/usr/bin/ranlib lib/libwgs84.a
